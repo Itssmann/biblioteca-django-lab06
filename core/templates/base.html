@@ -1,0 +1,19 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Biblioteca</title>
+  <style>
+    body { font-family: Arial, sans-serif; margin: 2rem auto; max-width: 960px; padding: 0 1rem; }
+    nav { margin-bottom: 2rem; } table { border-collapse: collapse; width: 100%; }
+    th, td { border: 1px solid #ccc; padding: .6rem; text-align: left; }
+    th { background: #f2f2f2; } .disponible { color: #087a2d; } .prestado { color: #a11; }
+    .acciones { display: flex; gap: .75rem; } button { cursor: pointer; }
+  </style>
+</head>
+<body>
+  <nav><a href="{% url 'inicio' %}">Inicio</a> | <a href="{% url 'library:listado_libros' %}">Libros</a> | <a href="{% url 'library:listado_autores' %}">Autores</a></nav>
+  <main>{% block content %}{% endblock %}</main>
+</body>
+</html>
