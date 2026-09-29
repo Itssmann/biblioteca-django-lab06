@@ -2,7 +2,7 @@
 {% block content %}
   <h1>Libros</h1>
   <p><a href="{% url 'library:crear_libro' %}">Registrar nuevo libro</a></p>
-  {# Ejercicio 6: esta tabla es el catálogo público; la columna Disponible usa las clases .disponible/.prestado definidas en el <style> de base.html #}
+  {# Ejercicio 6: esta tabla es el catálogo público; la columna Disponible usa las clases .disponible/.prestado definidas en los estilos de base.html #}
   <table>
     <thead><tr><th>Título</th><th>Autor</th><th>ISBN</th><th>Año</th><th>Disponible</th><th>Acciones</th></tr></thead>
     <tbody>{% for libro in libros %}
