@@ -13,7 +13,9 @@
   </style>
 </head>
 <body>
-  <nav><a href="{% url 'inicio' %}">Inicio</a> | <a href="{% url 'library:listado_libros' %}">Libros</a> | <a href="{% url 'library:listado_autores' %}">Autores</a></nav>
+  <header><p><strong>Biblioteca de barrio</strong></p><p>Catálogo y gestión de préstamos</p></header>
+  <nav><a href="{% url 'inicio' %}">Inicio</a> | <a href="{% url 'library:listado_libros' %}">Libros</a> | <a href="{% url 'library:listado_autores' %}">Autores</a> | <a href="{% url 'library:listado_editoriales' %}">Editoriales</a> | <a href="{% url 'library:listado_categorias' %}">Categorías</a> | <a href="{% url 'library:listado_lectores' %}">Lectores</a> | <a href="{% url 'library:listado_prestamos' %}">Préstamos</a></nav>
   <main>{% block content %}{% endblock %}</main>
+  <footer><hr><p>Biblioteca de barrio &copy; {% now "Y" %}</p></footer>
 </body>
 </html>
